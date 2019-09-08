@@ -1,5 +1,6 @@
 package yaml;
 
+import domain.BuildConfig;
 import main.ConfigInterface;
 import xml.XMLBuildConfigurationReader;
 
@@ -16,7 +17,9 @@ public class YAMLAdapter implements ConfigInterface{
 	}
 	@Override
 	public void buildTarget(String string, String target) {
-		
+		final BuildConfig yamlBuild = YAMLAdaptee.getBuildConfig();
+		Compile compile = new Compile(yamlBuild, target);
+		compile.build(1);
 	}
 
 

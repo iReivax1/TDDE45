@@ -22,10 +22,11 @@ public class Main {
 		System.out.println("Building target compile");
 		System.out.println("Building target dist");
 		ConfigInterface ci1 = ConfigFactory.getAdapter("x");
-		ci1.setConfigurationReader(new XMLBuildConfigurationReader(target));
+		//should replace build.xml and build.yaml with file name
+		ci1.setConfigurationReader(new XMLBuildConfigurationReader("build.xml"));
 	    ci1.buildTarget("build.xml", target);
 	    ConfigInterface ci2 = ConfigFactory.getAdapter("y");
-	    ci2.setConfigurationReader(new YamlBuildConfigurationReader(target));
+	    ci2.setConfigurationReader(new YamlBuildConfigurationReader("build.yaml"));
 	    ci2.buildTarget("build.yaml", target);
 	    
 		
