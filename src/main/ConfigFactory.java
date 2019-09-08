@@ -7,7 +7,7 @@ import yaml.YamlBuildConfigurationReader;
 
 public class ConfigFactory {
 	Object configurationReader = null;
-	
+	System.out.println("Building target init");
 	public static ConfigInterface getAdapter(String configOption) {
 		ConfigInterface ci = null;
 		

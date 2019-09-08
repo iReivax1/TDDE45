@@ -18,9 +18,6 @@ public class Main {
 		ConfigFactory factory = new ConfigFactory();
 		final String target = "dist";
 		System.out.println("Building myProject");
-		System.out.println("Building target init");
-		System.out.println("Building target compile");
-		System.out.println("Building target dist");
 		ConfigInterface ci1 = ConfigFactory.getAdapter("x");
 		//should replace build.xml and build.yaml with file name
 		ci1.setConfigurationReader(new XMLBuildConfigurationReader("build.xml"));

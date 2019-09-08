@@ -17,8 +17,10 @@ public class YAMLAdapter implements ConfigInterface{
 	}
 	@Override
 	public void buildTarget(String string, String target) {
+		System.out.println("Building target compile");
 		final BuildConfig yamlBuild = YAMLAdaptee.getBuildConfig();
 		Compile compile = new Compile(yamlBuild, target);
+		System.out.println("Building target dist");
 		compile.build(1);
 	}
 
