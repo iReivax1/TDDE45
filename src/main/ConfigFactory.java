@@ -1,9 +1,12 @@
 package main;
 
 import xml.XMLAdapter;
+import xml.XMLBuildConfigurationReader;
 import yaml.YAMLAdapter;
+import yaml.YamlBuildConfigurationReader;
 
 public class ConfigFactory {
+	Object configurationReader = null;
 	
 	public static ConfigInterface getAdapter(String configOption) {
 		ConfigInterface ci = null;
