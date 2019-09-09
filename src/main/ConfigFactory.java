@@ -13,15 +13,12 @@ public class ConfigFactory {
 		
 		if(configOption.equals("X") || configOption.equals("x")) {
 			ci = new XMLAdapter();
-			System.out.println("Building target init");
 		} 
 		else if(configOption.equals("Y") || configOption.equals("y")) {
 			ci = new YAMLAdapter();
-			System.out.println("Building target init");
 		} else {
 			// XML by default
 			ci = new XMLAdapter();
-			System.out.println("Building target init");
 		}
 		return ci;
 	}
