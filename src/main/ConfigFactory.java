@@ -19,6 +19,7 @@ public class ConfigFactory {
 		} else {
 			// XML by default
 			ci = new XMLAdapter();
+			System.out.println("It is running on XML type by deafult, try again to change");
 		}
 		return ci;
 	}
